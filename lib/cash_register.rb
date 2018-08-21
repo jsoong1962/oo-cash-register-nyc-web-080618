@@ -8,15 +8,27 @@ class CashRegister
      @item = []
      @transactions = []
    end
+<<<<<<< HEAD
 
+=======
+   
+  ITEMS = []
+  TRANSACTIONS = []
+>>>>>>> 55b2fd71c6e62f6421c37928e3b6e60fbee957a8
 
  def add_item(title, price, quantity = 1)
    total_quantity = price * quantity
    self.total += total_quantity
    for i in 1..quantity
+<<<<<<< HEAD
      @item << title
    end
     @transactions << total_quantity
+=======
+     ITEMS << title
+   end
+    TRANSACTIONS << total_quantity
+>>>>>>> 55b2fd71c6e62f6421c37928e3b6e60fbee957a8
  end
 
 
@@ -30,6 +42,7 @@ class CashRegister
  end
 
  def items
+<<<<<<< HEAD
    @item
  end
 
@@ -47,3 +60,12 @@ new_register = CashRegister.new
 cash_register = CashRegister.new
 cash_register.add_item("tomato", 1.76)
 p cash_register.void_last_transaction
+=======
+   ITEMS
+ end
+
+def void_last_transaction
+ (self.total - TRANSACTIONS[-1]).round
+end
+end
+>>>>>>> 55b2fd71c6e62f6421c37928e3b6e60fbee957a8
